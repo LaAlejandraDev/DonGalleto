@@ -118,3 +118,29 @@ body{
     object-fit: cover;
     margin: 0 auto;
 }
+
+.card-galletas {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.card-galletas:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.card-body .galletas{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 60px;
+}
+.card-title .galletas{
+    font-size: 1rem;
+    margin-bottom: 5px;
+    flex-grow: 1; 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+    word-wrap: break-word;
+}
