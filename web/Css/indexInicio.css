@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oleo+Script:wght@400;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    font-family: "Montserrat", sans-serif;
+}
+
+
+/* INICIO START */
+
+#inicioGalleteria .full-screen-img {
+    background-image: url('../Img/GalleteriaDonGalleto.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#inicioGalleteria .full-screen-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(29, 29, 30, 0.622);
+    z-index: 1;
+}
+
+#inicioGalleteria .inicioG{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+#inicioGalleteria .card {
+    background-color: transparent;
+    border: none;
+}
+
+#inicioGalleteria h1{
+    font-family: "Oleo Script", system-ui;
+    font-size: 60px;
+}
+
+#inicioGalleteria img {
+    border-radius: 60%;
+    width: 150px;
+    object-fit: cover;
+}
+
+
+#inicioGalleteria .d-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#inicioGalleteria button {
+    background-color: #A87008;
+    border: none;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin: 0 auto;
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
+
+#inicioGalleteria button:hover {
+    border: 1px solid #A87008;
+    background-color: transparent;
+    font-weight: 700;
+    color: #A87008;
+    transform: scale(1.1);
+}
+
+
+@media (max-width: 992px) {
+    #inicioGalleteria .full-screen-img {
+        display: none;
+    }
+
+    #inicioGalleteria .inicioG {
+        height: auto;
+    }
+}
+/* INICIO END */
