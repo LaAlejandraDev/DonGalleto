@@ -7,91 +7,69 @@
 
 /* INICIO START */
 
-#inicioGalleteria .full-screen-img {
-    background-image: url('../Img/GalleteriaDonGalleto.png');
-    background-size: cover;
-    background-position: center;
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#indexDeli {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    background: url('../Img/GalleteriaDonGalleto.png') no-repeat center center/cover;
 }
 
-#inicioGalleteria .full-screen-img::before {
-    content: "";
+#indexDeli::before {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(29, 29, 30, 0.622);
-    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
-#inicioGalleteria .inicioG{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#indexDeli .content {
     position: relative;
+    text-align: center;
+    color: #fff;
     z-index: 2;
 }
 
-#inicioGalleteria .card {
-    background-color: transparent;
-    border: none;
+#indexDeli .content h1, span{
+    font-size: 5rem;
+    font-weight: bold;
+    font-family: "Oleo Script", sans-serif;
 }
 
-#inicioGalleteria h1{
-    font-family: "Oleo Script", system-ui;
-    font-size: 60px;
-    color: #3A2812;
+#indexDeli .content img {
+    max-width: 300px;
+    margin: 20px 0;
+    border-radius: 100%;
 }
 
-#inicioGalleteria img {
-    border-radius: 60%;
-    width: 150px;
-    object-fit: cover;
+#indexDeli .btn {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-
-#inicioGalleteria .d-flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#inicioGalleteria button {
+#indexDeli .btn-button {
     background-color: #A87008;
     border: none;
-    font-weight: 700;
-    font-size: 14px;
-    padding: 10px 20px;
-    border-radius: 50px;
-    margin: 0 auto;
-    display: block;
-    transition: all 0.3s ease-in-out;
+    color: white;
+    font-weight: bold;
 }
 
-#inicioGalleteria button:hover {
-    border: 1px solid #A87008;
-    background-color: transparent;
-    font-weight: 700;
-    color: #A87008;
-    transform: scale(1.1);
+#indexDeli .btn-button:hover {
+    background-color: #a8700896;
+    transform: scale(1.05);
 }
 
-
-@media (max-width: 992px) {
-    #inicioGalleteria .full-screen-img {
-        display: none;
-    }
-
-    #inicioGalleteria .inicioG {
-        height: auto;
-    }
-}
 /* INICIO END */
 
 #users{
@@ -99,21 +77,23 @@
 }
 
 #users .title {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: bold;
     font-family: "Oleo Script", sans-serif;
     color: #3A2812;
     margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px #fdf7f0;
 }
 
+/* Tarjetas */
 #users .card {
     background-color: #FDF7F0;
     border-radius: 20px;
-    padding: 25px;
+    padding: 20px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid #E0D7CE;
-    height: 100%;
+    height: auto;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -122,6 +102,7 @@
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
 }
 
+/* Iconos */
 #users .icono-container {
     background-color: #F6EBE3;
     border-radius: 50%;
@@ -130,10 +111,12 @@
 }
 
 #users .icon {
-    width: 200px;
+    width: 150px;
+    max-width: 100%;
     height: auto;
 }
 
+/* Texto */
 #users .text {
     font-size: 1.4rem;
     color: #5C3D2E;
@@ -141,6 +124,7 @@
     margin: 0;
 }
 
+/* Botones */
 #users .btn {
     background-color: #D67747;
     border: none;
@@ -156,17 +140,32 @@
     transform: scale(1.1);
 }
 
-#users .card {
-    animation: fadeIn 1s ease-out;
+/* Responsividad */
+@media (max-width: 768px) {
+    #users .title {
+        font-size: 2.5rem;
+    }
+    #users .card {
+        padding: 15px;
+    }
+    #users .icon {
+        width: 120px;
+    }
+    #users .btn {
+        padding: 10px 18px;
+        font-size: 1rem;
+    }
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+@media (max-width: 576px) {
+    #users .title {
+        font-size: 2rem;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    #users .icon {
+        width: 100px;
+    }
+    #users .btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
     }
 }
