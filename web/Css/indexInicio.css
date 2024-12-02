@@ -46,6 +46,7 @@
 #inicioGalleteria h1{
     font-family: "Oleo Script", system-ui;
     font-size: 60px;
+    color: #3A2812;
 }
 
 #inicioGalleteria img {
@@ -92,3 +93,80 @@
     }
 }
 /* INICIO END */
+
+#users{
+    background-color: #E8CFC1;
+}
+
+#users .title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    font-family: "Oleo Script", sans-serif;
+    color: #3A2812;
+    margin-bottom: 2rem;
+}
+
+#users .card {
+    background-color: #FDF7F0;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #E0D7CE;
+    height: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#users .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+#users .icono-container {
+    background-color: #F6EBE3;
+    border-radius: 50%;
+    padding: 20px;
+    display: inline-block;
+}
+
+#users .icon {
+    width: 200px;
+    height: auto;
+}
+
+#users .text {
+    font-size: 1.4rem;
+    color: #5C3D2E;
+    font-weight: 600;
+    margin: 0;
+}
+
+#users .btn {
+    background-color: #D67747;
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#users .btn:hover {
+    background-color: #B95A28;
+    transform: scale(1.1);
+}
+
+#users .card {
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
